@@ -36,9 +36,11 @@ def recommend(movie):
     return recommend_list, recommend_list_poster, recommend_movie_id
 
 
-movies_list = pickle.load(open('movies.pkl', 'rb'))
+movies_list = pd.read_pickle('movies.pkl')
+# pickle.load(open('movies.pkl', 'rb'))
 
-similar_movies = pickle.load(open('similar.pkl', 'rb'))
+similar_movies = pd.read_pickle('similar.pkl')
+# pickle.load(open('similar.pkl', 'rb'))
 
 st.title('Movie Recommendation')
 
